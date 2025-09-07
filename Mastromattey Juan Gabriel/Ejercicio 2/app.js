@@ -77,18 +77,6 @@ app.put("/alumnos/:nombre", (req, res) => {
   res.json({ mensaje: "Notas actualizadas", alumno });
 });
 
-app.delete("/alumnos/:nombre", (req, res) => {
-  const nombre = req.params.nombre.toLowerCase();
-  const index = alumnos.findIndex((a) => a.nombre.toLowerCase() === nombre);
-
-  if (index === -1) {
-    return res.status(404).json({ error: "Alumno no encontrado" });
-  }
-
-  alumnos.splice(index, 1);
-  res.json({ mensaje: "Alumno eliminado" });
-});
-
 app.listen(3000, () => {
   console.log("Servidor corriendo en http://localhost:3000");
 });
