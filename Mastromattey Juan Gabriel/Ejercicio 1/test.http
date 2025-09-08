@@ -1,0 +1,23 @@
+### rectangulo
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+  "base": 10,
+  "altura": 5
+}
+
+### cuadrado
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+  "base": 7,
+  "altura": 7
+}
+
+### todos los calculos
+GET http://localhost:3000/rectangulos
+
+### calculo por ID (ejemplo: el 0)
+GET http://localhost:3000/rectangulos/0

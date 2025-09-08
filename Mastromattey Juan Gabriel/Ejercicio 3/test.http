@@ -1,0 +1,29 @@
+### Crear tareas 1
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Estudiar programación",
+  "completada": false
+}
+
+### Crear tareas 2
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Hacer ejercicio",
+  "completada": true
+}
+
+### Listar todas las tareas
+GET http://localhost:3000/tareas
+
+### Listar solo completadas
+GET http://localhost:3000/tareas?estado=completadas
+
+### Listar solo pendientes
+GET http://localhost:3000/tareas?estado=pendientes
+
+### Consultar una tarea específica
+GET http://localhost:3000/tareas/Estudiar programación
